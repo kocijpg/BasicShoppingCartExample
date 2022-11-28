@@ -1,0 +1,251 @@
+/*GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+
+/*VARIABLE CSS*/
+:root{
+
+    --front-color: #fff;
+    --light:rgb(241, 241, 241);
+    --back-color: rgb(122, 223, 184); 
+    --body-font: 'Poppins', sans-serif;
+    --logo-font: 'Permanent Marker', cursive;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--back-color);
+    font-family:var(--body-font);
+    overflow: hidden;
+}
+
+.container{
+    max-width: 768px;
+    /*border: 1px solid var(--front-color); /*Dışarıdaki çerçeve*/
+    max-width: 100%;
+    margin: 30px auto 0;
+    display: grid;
+    grid-template-columns: 200px auto 300px;
+    padding: 20px;
+    border-radius: 30px;
+    min-height: 80vh;
+}
+ /*MENU*/
+.container .menu{
+    background-color: var(--front-color);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.container .cart{
+    background-color:var(--front-color);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;/*Menu ve cartı bölümlerine ayrımak istediğimizde */
+}
+
+.container .center{
+    background-color: var(--light);
+
+}
+
+.menu .logo{
+    padding: 20px;
+    font-family: 'Lobster Two', cursive;;
+    font-size: xx-large;
+    height: 40px;
+}
+
+.menu .logo span{
+    color: var(--back-color);
+}
+
+.menu ul{
+    padding: 20px 0 20px 20px;
+    list-style: none;
+    border-bottom: 1px solid var(--light);
+}
+
+.menu ul li{
+    padding: 10px 0;
+}
+.menu ul li i{
+    margin-right: 12px;
+}
+
+.menu ul li.active{
+    color: var(--back-color);
+    border-right: 2px solid var(--back-color); /*Burası Home butonunun üstünde gibi gösterir*/
+}
+
+.menu ul li:hover{
+    color: var(--back-color);
+    border-right: 2px solid var(--back-color); 
+    cursor: pointer;
+}
+/*END MENU*/
+
+/*CENTER*/
+.center .search{
+    background-color: var(--front-color);
+    padding: 20px;
+    height: 40px;
+}
+
+.center .search .form{
+    width: max-content;
+    border: 1px solid var(--light);
+    border-radius: 20px;
+    padding-left: 15px;
+    color: var(--light);
+}   
+
+.center .search .form input{
+    border: none;
+    padding: 0 10px;
+    outline: none;
+    width: 100px;
+    font-family: var(--body-font);
+}   
+
+.center .search .form button{
+    border: none;
+    background-color: var(--back-color);
+    color: var(--light);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: var(--body-font);
+}   
+/*END CENTER*/
+
+.center h2{
+    padding: 20px;
+}
+.center .list{
+    padding: 0 20px 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.item{
+    background-color: var(--front-color);
+    display: grid;
+    grid-template-columns: 20% auto;
+    padding: 10px;
+    column-gap: 20px;
+    border-radius: 20px;
+    
+}
+.item .img img{
+    height: 70px;
+}
+.item .img{
+    background-color: var(--light);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item .content .title{
+    font-weight: bold;
+    font-family: var(--body-font);
+}
+
+.item .content .des{
+    font-size: small;
+    opacity: 0.7;
+    margin-top: 5px;
+    font-family: var(--body-font);
+}
+
+.item .content .oldprice{
+    color:black;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size:x-small;
+    margin-top: 5px;
+    text-decoration: line-through;
+}
+
+.item .content .price{
+    color: var(--back-color);
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: small;
+    margin-top: 5px;
+}
+
+
+
+.item .count{
+    width: 70px;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding: 3px 5px;
+    border: 1px solid var(--light);
+    outline: none;
+    margin-top: 5px;
+}
+
+.item .content .add{
+    margin-top: 5px;
+    background-color: var(--back-color);
+    color: var(--front-color);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    font-family: var(--body-font);
+}
+
+.item .content .add:hover{
+    background-color: var(--light);
+    color: var(--back-color);
+    cursor: pointer;
+}
+
+.item .content .remove{
+    margin-top: 5px;
+    border-radius: 10px;
+    color: var(--back-color);
+    padding: 5px;
+    border: none;
+    display: none;
+}
+
+.item .content .remove:hover{
+    background-color: var(--back-color);
+    color: var(--light);
+    cursor: pointer;
+}
+
+/*END CENTER*/
+
+.cart .item{
+    transition: 0.5s;
+    border-bottom: 1px solid var(--light);
+}
+
+.cart .name{
+    padding: 20px;
+    height: 40px;
+    font-weight: bold;
+    font-size: xx-large;
+    border-bottom: 1px solid var(--light);
+}
+
+.danger{
+    box-shadow: 0 10px 10px var(--back-color);
+    transform: translate(0,-10px);/*Tekrar alınıdığında ürün 10px yukaruı çıkıyor*/
+}
+
+.cart .add{
+    display: none;
+}
+
+.cart .remove{
+    display: inline-block!important;
+}
